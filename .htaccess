@@ -1,0 +1,8 @@
+# URLs amigáveis (Apache): /sobre-nos -> sobre-nos.html
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+?)/?$ $1.html [L]
+
+# Página 404 personalizada
+ErrorDocument 404 /404.html

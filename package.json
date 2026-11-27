@@ -1,0 +1,16 @@
+{
+    "name": "kklm-website",
+    "private": true,
+    "scripts": {
+        "products": "node scripts/build-products.mjs",
+        "pages": "node scripts/build-pages.mjs",
+        "loja": "node scripts/build-loja.mjs",
+        "en": "node scripts/build-en.mjs",
+        "css": "tailwindcss -c tailwind.config.js -i src/tailwind.css -o assets/css/tailwind.css --minify",
+        "build": "npm run products && npm run pages && npm run loja && npm run en && npm run css"
+    },
+    "devDependencies": {
+        "cheerio": "^1.0.0",
+        "tailwindcss": "3.4.17"
+    }
+}
